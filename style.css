@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: monospace, sans-serif;
+  background-color: #a99285;
+}
+
+.conatiner{
+  width:100%;
+  max-width: 500px;
+  background: #ede0d4;
+  margin: 100px auto 100px;
+  padding: 30px 40px 75px;
+  border-radius: 10px;
+  box-shadow: 8px 8px #603808;
+}
+
+header{
+  margin: 1rem 0px 2rem 0px;
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 2px 4px #603808;
+  text-align: center;
+}
+
+form{
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+#inputField{
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  flex: 1;
+}
+
+input::placeholder{
+  font-family: monospace, sans-serif;
+}
+
+input:hover::placeholder{
+  opacity: 0.5;
+}
+
+#addToDo{
+  padding: 0.25rem 0.75rem 0.25rem;
+  font-size: 24px;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #a78a7f;
+  background: #fff;
+}
+
+#addToDo:hover{
+  background: #a78a7f;
+  color: #fff;
+}
+
+ul li{
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  padding: 12px 50px 12px;
+  margin: 10px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+
+ul li::before{
+  position: absolute;
+  padding-right: 25px;
+  left: 10px;
+  bottom: 6px;
+  font-family: "Font Awesome 5 Free"; font-weight: 500; content: "\f0c8";
+  font-size: 30px;
+  color: #b08968;
+}
+
+ul li.finished{
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+ul li.finished::before{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f14a";
+}
+
+ul li span{
+  right: 6px;
+  position: absolute;
+  padding: 6px 20px 6px;
+  border-radius: 10px;
+  bottom: 6px;
+  background: #fff;
+}
+
+ul li span:hover{
+  background: #a78a7f;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
