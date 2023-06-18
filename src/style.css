@@ -1,3 +1,16 @@
+:root{
+  --page-clr: #a99285;
+  --container-clr: #ede0d4;
+  --shadow-clr: #603808;
+  --hover-primary-clr: #a78a7f;
+  --hover-secondary-clr: #fff;
+  --input-field-clr: #fff;
+  --list-clr: #fff;
+  --check-clr: #b08968;
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -6,24 +19,24 @@
 
 body{
   font-family: monospace, sans-serif;
-  background-color: #a99285;
+  background-color: var( --page-clr);
 }
 
 .conatiner{
   width:100%;
   max-width: 500px;
-  background: #ede0d4;
+  background: var(--container-clr);
   margin: 100px auto 100px;
   padding: 30px 40px 75px;
   border-radius: 10px;
-  box-shadow: 8px 8px #603808;
+  box-shadow: 8px 8px var(--shadow-clr);
 }
 
 header{
   margin: 1rem 0px 2rem 0px;
   color: #fff;
   font-size: 2rem;
-  text-shadow: 2px 4px #603808;
+  text-shadow: 2px 4px var(--shadow-clr);
   text-align: center;
 }
 
@@ -39,7 +52,7 @@ form{
   border: none;
   outline: none;
   border-radius: 5px;
-  background: #fff;
+  background: var(--input-field-clr);
   text-align: center;
   flex: 1;
 }
@@ -59,13 +72,13 @@ input:hover::placeholder{
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: #a78a7f;
-  background: #fff;
+  color: var(--hover-primary-clr);
+  background: var(--hover-secondary-clr);
 }
 
 #addToDo:hover{
-  background: #a78a7f;
-  color: #fff;
+  background: var(--hover-primary-clr);
+  color: var(--hover-secondary-clr);
 }
 
 ul li{
@@ -77,7 +90,7 @@ ul li{
   padding: 12px 50px 12px;
   margin: 10px;
   border-radius: 10px;
-  background: #fff;
+  background: var(--list-clr);
 }
 
 
@@ -88,7 +101,7 @@ ul li::before{
   bottom: 6px;
   font-family: "Font Awesome 5 Free"; font-weight: 500; content: "\f0c8";
   font-size: 30px;
-  color: #b08968;
+  color: var(--check-clr);
 }
 
 ul li.finished{
@@ -106,12 +119,12 @@ ul li span{
   padding: 6px 20px 6px;
   border-radius: 10px;
   bottom: 6px;
-  background: #fff;
+  background: var(--list-clr);
 }
 
 ul li span:hover{
-  background: #a78a7f;
-  color: #fff;
+  background: var(--hover-primary-clr);
+  color: var(--hover-secondary-clr);
 }
 
 
