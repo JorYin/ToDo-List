@@ -41,11 +41,11 @@ function taskFinished(event){
 
 }
 
-function save(){
+const save = () => {
   localStorage.setItem("data", toDoList.innerHTML);
 }
 
-function data(){
+const data = () => {
   toDoList.innerHTML = localStorage.getItem("data");
 }
 
