@@ -3,15 +3,9 @@
 const addToDoButton = document.getElementById("addToDo");
 const toDoList = document.getElementById("ulList");
 const toDoInput = document.getElementById("inputField");
-
+const clearToDoButton = document.getElementById("clearFinished")
 //Event Listeners
-addToDoButton.addEventListener("click", addTask);
-toDoList.addEventListener("click", taskFinished);
-data();
-
-//Funcations
-function addTask(event){
-
+addToDoButton.addEventListener("click", event => {
   event.preventDefault();
   //If there isn't any text in the input box alert the user!
   if(toDoInput.value.trim() === ""){
@@ -22,31 +16,41 @@ function addTask(event){
     //Make the span the letter x
     //Then add both children nodes into the main node which is the HTML element
     const list = document.createElement("li");
-    const listSpan = document.createElement("span");
     list.innerHTML = toDoInput.value;
-    listSpan.innerHTML = "X";
-    list.appendChild(listSpan);
     toDoList.appendChild(list);
     save();
-  }
+    }
     //clear input
     toDoInput.value = "";
 
-}
+});
 
-function taskFinished(event){
+toDoList.addEventListener("click", event => {
   //If LI is clicked toggle task as finished
   //If SPAN clicked remove the node from the parent element
   if(event.target.tagName === "LI"){
     event.target.classList.toggle("finished");
     save();
-  }else if(event.target.tagName === "SPAN"){
-    event.target.parentElement.remove();
-    save();
+  }
+});
+
+clearToDoButton.addEventListener("click", event => {
+  event.preventDefault();
+  const finishedArray = toDoList.getElementsByClassName("finished");
+  
+  if(finishedArray.length === 0){
+    alert("Please select task to clear!")
   }
 
-}
+  for (let i = finishedArray.length - 1; i >= 0; i--) {
+    finishedArray[i].remove();
+    }
+  save();
+});
 
+data();
+
+//Funcations
 
 //saving data on local web browser
 function save () {

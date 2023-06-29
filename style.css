@@ -110,17 +110,21 @@ ul li.finished::before{
   font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f14a";
 }
 
-ul li span{
-  top: 18%; 
+#clearFinished{
+  font-family: monospace, sans-serif;
   position: absolute;
-  padding: 0px 10px 3px;
-  right: 10px;
-  border-radius: 10px;
-  font-size: 20px;
-  background: var(--list-clr);
+  box-sizing: border-box;
+  padding: 1rem 6.5rem 1rem;
+  font-size: 18px;
+  margin: 0.5rem 0px 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--hover-primary-clr);
+  background: var(--hover-secondary-clr);
 }
 
-ul li span:hover{
+#clearFinished:hover{
   background: var(--hover-primary-clr);
   color: var(--hover-secondary-clr);
 }
@@ -147,11 +151,10 @@ ul li span:hover{
     font-size: 25px;
   }
 
-  ul li span{
-    top: 15%; 
-    font-size: 18px;
+  #clearFinished{
+    font-size: 16px;
+    padding: 1rem 1.65rem 1rem;
   }
-
   
 }
 

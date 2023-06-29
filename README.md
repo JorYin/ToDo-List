@@ -2,12 +2,6 @@
 
 ## First introduction to Javascript.
 
-### Desktop 
-![ToDo Desktop](Img/Desktop.png)
-
-### Phone
-![ToDo Phone](Img/Phone.png)
-
 - I learned how data is handled using functions and addEventListeners in this project. Also, utilizing localStorage to save data on the browser.
 
 # Features
