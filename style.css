@@ -1,0 +1,163 @@
+:root{
+  --page-clr: #a99285;
+  --container-clr: #ede0d4;
+  --shadow-clr: #603808;
+  --hover-primary-clr: #a78a7f;
+  --hover-secondary-clr: #fff;
+  --input-field-clr: #fff;
+  --list-clr: #fff;
+  --check-clr: #b08968;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: monospace, sans-serif;
+  background-color: var( --page-clr);
+}
+
+.conatiner{
+  width:100%;
+  max-width: 500px;
+  background: var(--container-clr);
+  margin: 100px auto 100px;
+  padding: 30px 40px 75px;
+  border-radius: 10px;
+  box-shadow: 8px 8px var(--shadow-clr);
+}
+
+header{
+  margin: 1rem 0px 2rem 0px;
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 2px 4px var(--shadow-clr);
+  text-align: center;
+}
+
+form{
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+#inputField{
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: var(--input-field-clr);
+  text-align: center;
+  flex: 1;
+}
+
+input::placeholder{
+  font-family: monospace, sans-serif;
+}
+
+input:hover::placeholder{
+  opacity: 0.5;
+}
+
+#addToDo{
+  padding: 0.25rem 0.75rem 0.25rem;
+  font-size: 24px;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--hover-primary-clr);
+  background: var(--hover-secondary-clr);
+}
+
+#addToDo:hover{
+  background: var(--hover-primary-clr);
+  color: var(--hover-secondary-clr);
+}
+
+ul li{
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  padding: 12px 50px 12px;
+  margin: 10px;
+  border-radius: 10px;
+  background: var(--list-clr);
+}
+
+ul li::before{
+  top: 15%;
+  position: absolute;
+  padding-right: 25px;
+  left: 10px;
+  font-family: "Font Awesome 5 Free"; font-weight: 500; content: "\f0c8";
+  font-size: 30px;
+  color: var(--check-clr);
+}
+
+ul li.finished{
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+ul li.finished::before{
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f14a";
+}
+
+ul li span{
+  top: 18%; 
+  position: absolute;
+  padding: 0px 10px 3px;
+  right: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  background: var(--list-clr);
+}
+
+ul li span:hover{
+  background: var(--hover-primary-clr);
+  color: var(--hover-secondary-clr);
+}
+
+@media only screen and (max-device-width: 480px){
+  .conatiner{
+    width:100%;
+    max-width: 300px;
+    margin: 50px auto 50px;
+    padding: 30px 30px 75px;
+  }
+  header{
+    font-size: 1rem;
+    text-shadow: 2px 3px var(--shadow-clr);
+  }
+  ul li{
+    font-size: 12px;
+    padding: 12px 40px 12px;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  ul li::before{
+    top: 15%;
+    font-size: 25px;
+  }
+
+  ul li span{
+    top: 15%; 
+    font-size: 18px;
+  }
+
+  
+}
+
+
+
+
+
+
+
