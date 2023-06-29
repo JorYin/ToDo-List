@@ -9,8 +9,6 @@
   --check-clr: #b08968;
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -93,12 +91,11 @@ ul li{
   background: var(--list-clr);
 }
 
-
 ul li::before{
+  top: 15%;
   position: absolute;
   padding-right: 25px;
   left: 10px;
-  bottom: 6px;
   font-family: "Font Awesome 5 Free"; font-weight: 500; content: "\f0c8";
   font-size: 30px;
   color: var(--check-clr);
@@ -114,11 +111,12 @@ ul li.finished::before{
 }
 
 ul li span{
-  right: 6px;
+  top: 18%; 
   position: absolute;
-  padding: 6px 20px 6px;
+  padding: 0px 10px 3px;
+  right: 10px;
   border-radius: 10px;
-  bottom: 6px;
+  font-size: 20px;
   background: var(--list-clr);
 }
 
@@ -127,6 +125,35 @@ ul li span:hover{
   color: var(--hover-secondary-clr);
 }
 
+@media only screen and (max-device-width: 480px){
+  .conatiner{
+    width:100%;
+    max-width: 300px;
+    margin: 50px auto 50px;
+    padding: 30px 30px 75px;
+  }
+  header{
+    font-size: 1rem;
+    text-shadow: 2px 3px var(--shadow-clr);
+  }
+  ul li{
+    font-size: 12px;
+    padding: 12px 40px 12px;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  ul li::before{
+    top: 15%;
+    font-size: 25px;
+  }
+
+  ul li span{
+    top: 15%; 
+    font-size: 18px;
+  }
+
+  
+}
 
 
 
