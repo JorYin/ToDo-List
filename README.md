@@ -2,6 +2,13 @@
 
 ## First introduction to Javascript.
 
+### Desktop
+![Desktop app image](Img/Desktop.png)
+
+### Phone
+![Phone app image](Img/Phone.png)
+
+
 - I learned how data is handled using functions and addEventListeners in this project. Also, utilizing localStorage to save data on the browser.
 
 # Features
